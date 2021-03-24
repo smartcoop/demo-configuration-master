@@ -5,7 +5,7 @@ namespace TestProject
 {
     public class Tests
     {
-        [Fact]
+        [Fat]
         public void Test1()
         {
             Assert.True(true);
