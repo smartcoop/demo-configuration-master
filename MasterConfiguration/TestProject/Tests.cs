@@ -9,6 +9,7 @@ namespace TestProject
         public void Test1()
         {
             Assert.True(true);
+            var lul = "lul";
         }
     }
 }
