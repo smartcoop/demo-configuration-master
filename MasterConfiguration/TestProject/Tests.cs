@@ -8,6 +8,7 @@ namespace TestProject
         [Fact]
         public void Test1()
         {
+            var lol = "lol";
             Assert.True(true);
             var lul = "lul";
         }
