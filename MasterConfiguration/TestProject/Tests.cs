@@ -5,9 +5,11 @@ namespace TestProject
 {
     public class Tests
     {
-        [Fact]
+        [Fat]
         public void Test1()
         {
+            var lol = "lol";
+            var lel = "lel";
             Assert.True(true);
             var lol = "lol";
         }
