@@ -10,6 +10,7 @@ namespace TestProject
         {
             var lol = "lol";
             var lel = "lel";
+            var lul = "lul";
             Assert.True(true);
             var lol = "lol";
         }
