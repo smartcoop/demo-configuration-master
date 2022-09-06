@@ -1,16 +1,12 @@
-on: pull_request
+name: Git Checks
 
-name: Block Merge and Autosquash Commits
+on: [pull_request]
 
 jobs:
-  message-check:
-    name: Block Merge and Autosquash Commits
-
-    runs-on: ubuntu-latest
-
-    permissions:
-      pull-requests: read
+  block-fixup:
+    runs-on: ubuntu-18.04
 
     steps:
-      - name: Block Merge and Autosquash Commits
-        uses: nineinchnick/block-commits-action@v2
+    - uses: actions/checkout@v2.0.0
+    - name: Block Fixup Commit Merge
+      uses: 13rac1/block-fixup-merge-action@v2.0.0
