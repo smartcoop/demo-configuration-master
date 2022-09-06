@@ -12,7 +12,6 @@ namespace TestProject
             var lel = "lel";
             Assert.True(true);
             var lol = "lol";
-            asd asd asd asd asd ad
         }
     }
 }
