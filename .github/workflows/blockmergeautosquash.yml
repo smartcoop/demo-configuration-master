@@ -1,11 +1,16 @@
-- name: Block Merge and Autosquash Commits
-  # You may pin to the exact commit or the version.
-  # uses: nineinchnick/block-commits-action@cd9fda8345b5ec64c5f97cdd3797226be08d192c
-  uses: nineinchnick/block-commits-action@v2.1.0
-  with:
-    # Token for the repo. Can be passed in using {{ secrets.GITHUB_TOKEN }}
-    repo-token: # default is ${{ github.token }}
-    # Action to take when merge commits are found. One of: none, fail, request-changes; defaults to fail.
-    action-merge: # default is fail
-    # Action to take when fixup commits are found. One of: none, fail, request-changes; defaults to fail.
-    action-fixup: # default is fail
+on: pull_request
+
+name: Block Merge or Autosquash Commits
+
+jobs:
+  message-check:
+    name: Block Merge or Autosquash Commits
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Block Merge or Autosquash Commits
+        uses: nineinchnick/block-commits-action@v2.1.0
+        with:
+          action-merge: fail
+          action-fixup: request-changes
